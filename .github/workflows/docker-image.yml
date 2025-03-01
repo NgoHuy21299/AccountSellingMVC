@@ -20,7 +20,7 @@ jobs:
         token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
         
     - name: Build the Docker image
-      run: docker build --tag registry.digitalocean.com/event-ticketing-system/account-selling-mvc:latest
+      run: docker build -file AccountSellingMVC/Dockerfile . --tag registry.digitalocean.com/event-ticketing-system/account-selling-mvc:latest
     
     - name: Log in to DigitalOcean Container Registry with short-lived credentials
       run: doctl registry login --expiry-seconds 1200
