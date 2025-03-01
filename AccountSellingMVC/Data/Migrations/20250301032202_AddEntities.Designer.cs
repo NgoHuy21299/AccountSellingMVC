@@ -3,6 +3,7 @@ using System;
 using AccountSellingMVC.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AccountSellingMVC.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250301032202_AddEntities")]
+    partial class AddEntities
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,96 +53,6 @@ namespace AccountSellingMVC.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Accounts");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedAt = new DateTime(2025, 3, 1, 3, 27, 39, 124, DateTimeKind.Utc).AddTicks(8979),
-                            Password = "qn30mqmm",
-                            RecoveryEmail = "4tfa2nff77@nguyenmail.top",
-                            Username = "4qa7ma3m@c.cmkee.life"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedAt = new DateTime(2025, 3, 1, 3, 27, 39, 124, DateTimeKind.Utc).AddTicks(8982),
-                            Password = "1cksbx7o",
-                            RecoveryEmail = "e529nid7a@nguyenmail.top",
-                            Username = "vn5c2n45@c.cmkee.life"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedAt = new DateTime(2025, 3, 1, 3, 27, 39, 124, DateTimeKind.Utc).AddTicks(8984),
-                            Password = "nrkq5159",
-                            RecoveryEmail = "umlddfrd@nguyenmail.top",
-                            Username = "7tb4g6vl@c.cmkee.life"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedAt = new DateTime(2025, 3, 1, 3, 27, 39, 124, DateTimeKind.Utc).AddTicks(8986),
-                            Password = "14lbf3nc",
-                            RecoveryEmail = "2776amyzv@nguyenmail.top",
-                            Username = "r0mbh3tz@c.cmkee.life"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreatedAt = new DateTime(2025, 3, 1, 3, 27, 39, 124, DateTimeKind.Utc).AddTicks(8988),
-                            Password = "wzg3a8if",
-                            RecoveryEmail = "fh5etxbn@nguyenmail.top",
-                            Username = "v8vgfmpn@c.cmkee.life"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreatedAt = new DateTime(2025, 3, 1, 3, 27, 39, 124, DateTimeKind.Utc).AddTicks(8991),
-                            Password = "ng2f509e",
-                            RecoveryEmail = "998bekgyp@nguyenmail.top",
-                            Username = "z1hvkld2@c.cmkee.life"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreatedAt = new DateTime(2025, 3, 1, 3, 27, 39, 124, DateTimeKind.Utc).AddTicks(8993),
-                            Password = "vo0tn80s",
-                            RecoveryEmail = "d4qs3klqh@nguyenmail.top",
-                            Username = "mq3rvwmy@c.cmkee.life"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CreatedAt = new DateTime(2025, 3, 1, 3, 27, 39, 124, DateTimeKind.Utc).AddTicks(8995),
-                            Password = "shb3ppr3",
-                            RecoveryEmail = "xqq3fi17@nguyenmail.top",
-                            Username = "7cq1xt3f@c.cmkee.life"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CreatedAt = new DateTime(2025, 3, 1, 3, 27, 39, 124, DateTimeKind.Utc).AddTicks(8996),
-                            Password = "qmlxskwg",
-                            RecoveryEmail = "ovgfoxdui9@nguyenmail.top",
-                            Username = "i4ntmlot@c.cmkee.life"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            CreatedAt = new DateTime(2025, 3, 1, 3, 27, 39, 124, DateTimeKind.Utc).AddTicks(8999),
-                            Password = "bgzgy62l",
-                            RecoveryEmail = "h9a5ovfbhn@nguyenmail.top",
-                            Username = "ozc5hvb9@c.cmkee.life"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            CreatedAt = new DateTime(2025, 3, 1, 3, 27, 39, 124, DateTimeKind.Utc).AddTicks(9067),
-                            Password = "4iowfnuq",
-                            RecoveryEmail = "3ksn5d6r@nguyenmail.top",
-                            Username = "3412tp9l@c.cmkee.life"
-                        });
                 });
 
             modelBuilder.Entity("AccountSellingMVC.Entities.AccountWebsite", b =>
